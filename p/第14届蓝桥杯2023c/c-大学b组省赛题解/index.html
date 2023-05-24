@@ -160,10 +160,20 @@
     <li><a href="#二程序题">二.程序题</a>
       <ol>
         <li><a href="#c-冶炼金属-tag数论二分">C. 冶炼金属 tag:数论/二分</a></li>
-        <li><a href="#d飞机降落-tag搜索">D.飞机降落 tag:搜索</a></li>
+        <li><a href="#d飞机降落-tag搜索">D.飞机降落 tag:搜索</a>
+          <ol>
+            <li><a href="#方法一暴力搜索">方法一.暴力搜索</a></li>
+          </ol>
+        </li>
         <li><a href="#e-接龙序列-tag动态规划">E. 接龙序列 tag:动态规划</a></li>
         <li><a href="#f-岛屿个数-tag搜索-floodfill">F. 岛屿个数 tag:搜索 FloodFill</a></li>
-        <li><a href="#g子串简写-tag双指针二分前缀和">G.子串简写 tag:双指针/二分/前缀和</a></li>
+        <li><a href="#g子串简写-tag双指针二分前缀和">G.子串简写 tag:双指针/二分/前缀和</a>
+          <ol>
+            <li><a href="#方法一二分搜索">方法一：二分搜索</a></li>
+            <li><a href="#方法二双指针">方法二：双指针</a></li>
+            <li><a href="#方法三前缀和">方法三：前缀和</a></li>
+          </ol>
+        </li>
         <li><a href="#h-整除删除-tag优先队列-stl-双链表">H. 整除删除 tag:优先队列 STL 双链表</a></li>
         <li><a href="#i-景区导游-taglca-枚举-树上距离">I. 景区导游 tag:LCA 枚举 树上距离</a></li>
         <li><a href="#j-砍树-taglca-树上边差分">J. 砍树 tag:LCA 树上边差分</a></li>
@@ -458,7 +468,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="d飞机降落-tag搜索">D.飞机降落 tag:搜索</h3>
-<p>​	数据量非常小，应该是暴力搜索，但考虑可以利用贪心的性质避免一些无效的搜索，算是剪枝了。</p>
+<h4 id="方法一暴力搜索">方法一.暴力搜索</h4>
 <p>​</p>
 <h3 id="e-接龙序列-tag动态规划">E. 接龙序列 tag:动态规划</h3>
 <p>​	定义$f[i][j]$ 为前$i$ 位中，以数字$j$ 为结尾的接龙最大长度，答案就是$n-f[n][?]$ ，问号处是最优解的数字。</p>
@@ -523,7 +533,7 @@ $$
 <p>​	<a class="link" href="https://www.acwing.com/file_system/file/content/whole/index/content/9138271/"  target="_blank" rel="noopener"
     >参见这个，也是我写的</a></p>
 <h3 id="g子串简写-tag双指针二分前缀和">G.子串简写 tag:双指针/二分/前缀和</h3>
-<p><strong>方法一：二分搜索</strong></p>
+<h4 id="方法一二分搜索">方法一：二分搜索</h4>
 <p>​	题意：字符串中有多少个长度大于等于$k$ 的，且首字符为$c1$ ，尾字符为$c2$ 的子串？字符串长度为$5e5$ ，盲猜时间复杂度是$O(nlogn)$ 或者$O(n)$ （注意这里没说一定满足$c1≠c2$ ）</p>
 <p>​	令$a[i]$ 为首字符出现位置的数组，例如$a[1]=2$ 代表第$1$ 个$c1$ 字符出现的位置是$2$ ，同理再令$b[i]$ 保存尾字符出现位置，然后$lena$ 代表记录了多少个$c_1$ ，$lenb$同理 。</p>
 <p>​	我们每遍历一个$a[i]$ ，然后寻找第一个下标位置大于等于$a[i]+k$ 的$b[j]$ ，然后说明从$j$ 开始，$b[j],b[j+1]$ 以及$b[lenb]$ 都能与其组成一个长度一定不小于$k$的合法子串，这样以来时间复杂度是$O(nlogn)$</p>
@@ -595,7 +605,7 @@ $$
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>方法二：双指针</strong></p>
+</div><h4 id="方法二双指针">方法二：双指针</h4>
 <p>​	我们不妨设$p1$ 为记录$a$ 数组的指针，$p2$ 同理。</p>
 <p>​	当$a[p1]$ 与$b[p2]$ 的长度足够$k$ 了，说明有$lenb-p2$ 个尾字符可以与$p1$ 匹配，此时$p2$ 无需回退，因为$p1$ 增长后，只会对$b$ 的要求更严格，$p1$ 还比较小的时候，$p2$ 前面的下标都不够了，更不可能增大后还够，所以两个指针都是单调递增移动的，所以是双指针解法，时间复杂度是$O(n)$</p>
 <div class="highlight"><div class="chroma">
@@ -660,7 +670,7 @@ $$
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>方法三：前缀和</strong></p>
+</div><h4 id="方法三前缀和">方法三：前缀和</h4>
 <p>​	写到这里其实明白了：这道题的瓶颈就在于怎么寻找<code>当前尾字符能与之构成长度大于等于k的首字符个数</code> ，不难想到区间个数询问，也就是前缀和维护。</p>
 <p>​	记$pre[i]$ 为前$i$ 个字符中首字符出现的次数，每遍历一个尾字符，有效的首字符个数就是$pre[i-k+1]$</p>
 <div class="highlight"><div class="chroma">
