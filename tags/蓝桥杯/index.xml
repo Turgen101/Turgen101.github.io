@@ -123,7 +123,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;二程序题&#34;&gt;二.程序题&lt;/h2&gt;
-&lt;h3 id=&#34;c-冶炼金属-tag数论二分&#34;&gt;C. 冶炼金属 tag:数论/二分&lt;/h3&gt;
+&lt;h3 id=&#34;c-冶炼金属-二分-数学&#34;&gt;C. 冶炼金属 &lt;code&gt;二分&lt;/code&gt; &lt;code&gt;数学&lt;/code&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;方法一二分搜索&#34;&gt;方法一：二分搜索&lt;/h4&gt;
 &lt;p&gt;​	这是我赛时用的方法，首先明白一个概念：最小的$V$ 代表最大的转换效率，最大的$V$ 代表最差的转换效率，首先先推一下$V_{max}$ ，不妨设$V1=max(\frac{a[i]}{b[i]})$ ，假设这个值并不是最大值，也就是存在一个$V_1’&amp;gt;V_1$ ，那对于取到最大值的那一对$a[i],b[i]$ ，$a[i]/(V_1&amp;rsquo;)&amp;lt;b[i]$ ，所以这个值一定是$V_{max}$&lt;/p&gt;
 &lt;p&gt;​	而$V_{min}$ 就不能是最小的了，$V_{min}$ 就是满足$a[i]/V=b[i]$ 中最小的那个$V$ ，显然需要用到二分搜索，而且是往小了搜，判断函数是是否满足每一个$a[i]/V$ 后都可以得到$b[i]$ 。&lt;/p&gt;
