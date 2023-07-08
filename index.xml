@@ -259,8 +259,8 @@
         <pubDate>Tue, 23 May 2023 15:53:15 +0800</pubDate>
         
         <guid>https://Turgen.gitee.io/p/%E7%AC%AC14%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF2023c/c-%E5%A4%A7%E5%AD%A6b%E7%BB%84%E7%9C%81%E8%B5%9B%E9%A2%98%E8%A7%A3/</guid>
-        <description>&lt;h2 id=&#34;一填空题&#34;&gt;一.填空题&lt;/h2&gt;
-&lt;h3 id=&#34;a日期统计&#34;&gt;A.日期统计&lt;/h3&gt;
+        <description>&lt;h1 id=&#34;一填空题&#34;&gt;一.填空题&lt;/h1&gt;
+&lt;h2 id=&#34;a日期统计&#34;&gt;A.日期统计&lt;/h2&gt;
 &lt;p&gt;​	这题大概问的就是这些数组构成多少个是$2023$ 的子序列。&lt;/p&gt;
 &lt;p&gt;​	这题千万不要一个一个找。我赛时想到了一个很绝妙的方法：直接反过来考虑，枚举$2023$ 每一天的日期，看看在这个数组能不能找到对应的子序列，这样编码复杂度直接降了一半，并且不会有重复！&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -325,7 +325,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;b01串的熵&#34;&gt;B.01串的熵&lt;/h3&gt;
+&lt;/div&gt;&lt;h2 id=&#34;b01串的熵&#34;&gt;B.01串的熵&lt;/h2&gt;
 &lt;p&gt;​	由于$1$ 比$0$ 多，所以$0$ 的取值在$[0,n/2)$ 之间，枚举每一个取值。&lt;/p&gt;
 &lt;p&gt;​	这里注意精度问题，精度可以控制在$1e-4$ ，然后只关注大于$H(s)$ 的值，所以要保证大于$0$ ，打印就可以得到结果，当然如果不会精度控制的话，直接将$11625907\sim11625908$ 之间的所有有效解打印出来，一个一个找也可以。&lt;/p&gt;
 &lt;p&gt;​	这里比较考察推式子的能力&lt;/p&gt;
@@ -369,10 +369,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;二程序题&#34;&gt;二.程序题&lt;/h2&gt;
-&lt;h3 id=&#34;c-冶炼金属-二分-数学&#34;&gt;C. 冶炼金属 &lt;code&gt;二分&lt;/code&gt; &lt;code&gt;数学&lt;/code&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;方法一二分搜索&#34;&gt;方法一：二分搜索&lt;/h4&gt;
-&lt;p&gt;​	这是我赛时用的方法，首先明白一个概念：最小的$V$ 代表最大的转换效率，最大的$V$ 代表最差的转换效率，首先先推一下$V_{max}$ ，不妨设$V1=max(\frac{a[i]}{b[i]})$ ，假设这个值并不是最大值，也就是存在一个$V_1’&amp;gt;V_1$ ，那对于取到最大值的那一对$a[i],b[i]$ ，$a[i]/(V_1&amp;rsquo;)&amp;lt;b[i]$ ，所以这个值一定是$V_{max}$&lt;/p&gt;
+&lt;/div&gt;&lt;h1 id=&#34;二程序题&#34;&gt;二.程序题&lt;/h1&gt;
+&lt;h2 id=&#34;c-冶炼金属&#34;&gt;C. 冶炼金属&lt;/h2&gt;
+&lt;h3 id=&#34;方法一二分搜索&#34;&gt;方法一：二分搜索&lt;/h3&gt;
+&lt;p&gt;​	这是我赛时用的方法，首先明白一个概念：最小的$V$ 代表最大的转换效率，最大的$V$ 代表最差的转换效率，首先先推一下$V_{max}$ ，不妨设$V1=max(\frac{a[i]}{b[i]})$ ，假设这个值并不是最大值，也就是存在一个$V_1’&amp;gt;V_1$ ，那对于取到最大值的那一对$a[i],b[i]$ ，$\frac{a[i]}{(V_1&amp;rsquo;)}&amp;lt;b[i]$ ，所以这个值一定是$V_{max}$&lt;/p&gt;
 &lt;p&gt;​	而$V_{min}$ 就不能是最小的了，$V_{min}$ 就是满足$a[i]/V=b[i]$ 中最小的那个$V$ ，显然需要用到二分搜索，而且是往小了搜，判断函数是是否满足每一个$a[i]/V$ 后都可以得到$b[i]$ 。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -436,7 +436,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(nlogn)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h4 id=&#34;方法二数学知识&#34;&gt;方法二：数学知识&lt;/h4&gt;
+&lt;h3 id=&#34;方法二数学知识&#34;&gt;方法二：数学知识&lt;/h3&gt;
 &lt;p&gt;​	$V_{max}$ 已经推过了，现在推一下另一个，假设最小的$V$ 是$V_{min}$ ，小到什么程度呢，小到$a[i]/(v-1)=b[i]+1$ ，反过来得到：$v=(\frac{a[i]}{b[i]+1})+1$ ，然后多组数据取一个交集即可，这个$v$ 在其他组数据可能是小了点，所以要取最大的那个然后加$1$ 。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -476,8 +476,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;d飞机降落-tag搜索&#34;&gt;D.飞机降落 tag:搜索&lt;/h3&gt;
-&lt;h4 id=&#34;方法一暴力搜索&#34;&gt;方法一.暴力搜索&lt;/h4&gt;
+&lt;/div&gt;&lt;h2 id=&#34;d飞机降落-tag搜索&#34;&gt;D.飞机降落 tag:搜索&lt;/h2&gt;
+&lt;h3 id=&#34;方法一暴力搜索&#34;&gt;方法一.暴力搜索&lt;/h3&gt;
 &lt;p&gt;​	可以看成一个排列题，然后对于第$i$ 个位置安排的航班$j$ ，他应该在满足不与上一架飞机冲突的情况下尽可能早的飞，即他的飞行时间是$max(上一架结束的时间,开始时间)$ ，其中$dfs$ 的签名第一个函数代表位置，第二个函数代表上一架飞机飞行结束的时间&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -563,7 +563,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(n!)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h4 id=&#34;方法二状压dp&#34;&gt;方法二.状压DP&lt;/h4&gt;
+&lt;h3 id=&#34;方法二状压dp&#34;&gt;方法二.状压DP&lt;/h3&gt;
 &lt;p&gt;​	考虑$f[S]$ 代表选择了$S$ 子集的最早结束时间。$f[S]=max(f[S],max(f[S-k],start[k])+end[k])$  ，即代表从中任意去除一个点，如果这个点的开始时间比决策过来的时间还早，那就选决策时间（否则会冲突），反之选开始时间（即体现出$max()$ ），答案为$f[2^{n}-1]$ ，初始化$f[0]=0$ ，其他的为$inf$&lt;/p&gt;
 &lt;p&gt;​	其实从状态转移方程来看，$f[S]$ 的演变其实就是谁安排在最后一位最优而已。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -642,7 +642,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(2^nn)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(2^n)$&lt;/p&gt;
-&lt;h3 id=&#34;e-接龙序列-tag动态规划&#34;&gt;E. 接龙序列 tag:动态规划&lt;/h3&gt;
+&lt;h2 id=&#34;e-接龙序列-tag动态规划&#34;&gt;E. 接龙序列 tag:动态规划&lt;/h2&gt;
 &lt;p&gt;​	定义$f[i][j]$ 为前$i$ 位中，以数字$j$ 为结尾的接龙最大长度，答案就是$n-f[n][?]$ ，问号处是最优解的数字。&lt;/p&gt;
 &lt;p&gt;​	设$head[i]$ 是第$i$ 位数字的首位，$tail[i]$ 是第$i$ 位数字的末位，根据题目所述，数字$a[i-1]$ 和$a[i]$ 能形成接龙的条件就是：$tail[i-1]=head[i]$ 。&lt;/p&gt;
 &lt;p&gt;​	$f[i][j]$ 可以由$f[i-1][j]$ （不选这个第$i$ 个数字）或$f[i-1][head[i]]$ （仅当$j=head[i]$ ），然后预处理一下每一个位置上数字的$head,tail$ 即可，时间复杂度是$O(n+n)=O(2n)=O(n)$&lt;/p&gt;
@@ -701,11 +701,11 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;f-岛屿个数-tag搜索-floodfill&#34;&gt;F. 岛屿个数 tag:搜索 FloodFill&lt;/h3&gt;
+&lt;/div&gt;&lt;h2 id=&#34;f-岛屿个数-tag搜索-floodfill&#34;&gt;F. 岛屿个数 tag:搜索 FloodFill&lt;/h2&gt;
 &lt;p&gt;​	&lt;a class=&#34;link&#34; href=&#34;https://www.acwing.com/file_system/file/content/whole/index/content/9138271/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;参见这个，也是我写的&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;g子串简写-tag双指针二分前缀和&#34;&gt;G.子串简写 tag:双指针/二分/前缀和&lt;/h3&gt;
-&lt;h4 id=&#34;方法一二分搜索-1&#34;&gt;方法一：二分搜索&lt;/h4&gt;
+&lt;h2 id=&#34;g子串简写-tag双指针二分前缀和&#34;&gt;G.子串简写 tag:双指针/二分/前缀和&lt;/h2&gt;
+&lt;h3 id=&#34;方法一二分搜索-1&#34;&gt;方法一：二分搜索&lt;/h3&gt;
 &lt;p&gt;​	题意：字符串中有多少个长度大于等于$k$ 的，且首字符为$c1$ ，尾字符为$c2$ 的子串？字符串长度为$5e5$ ，盲猜时间复杂度是$O(nlogn)$ 或者$O(n)$ （注意这里没说一定满足$c1≠c2$ ）&lt;/p&gt;
 &lt;p&gt;​	令$a[i]$ 为首字符出现位置的数组，例如$a[1]=2$ 代表第$1$ 个$c1$ 字符出现的位置是$2$ ，同理再令$b[i]$ 保存尾字符出现位置，然后$lena$ 代表记录了多少个$c_1$ ，$lenb$同理 。&lt;/p&gt;
 &lt;p&gt;​	我们每遍历一个$a[i]$ ，然后寻找第一个下标位置大于等于$a[i]+k$ 的$b[j]$ ，然后说明从$j$ 开始，$b[j],b[j+1]$ 以及$b[lenb]$ 都能与其组成一个长度一定不小于$k$的合法子串，这样以来时间复杂度是$O(nlogn)$&lt;/p&gt;
@@ -779,7 +779,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(nlogn)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h4 id=&#34;方法二双指针&#34;&gt;方法二：双指针&lt;/h4&gt;
+&lt;h3 id=&#34;方法二双指针&#34;&gt;方法二：双指针&lt;/h3&gt;
 &lt;p&gt;​	我们不妨设$p1$ 为记录$a$ 数组的指针，$p2$ 同理。&lt;/p&gt;
 &lt;p&gt;​	当$a[p1]$ 与$b[p2]$ 的长度足够$k$ 了，说明有$lenb-p2$ 个尾字符可以与$p1$ 匹配，此时$p2$ 无需回退，因为$p1$ 增长后，只会对$b$ 的要求更严格，$p1$ 还比较小的时候，$p2$ 前面的下标都不够了，更不可能增大后还够，所以两个指针都是单调递增移动的，所以是双指针解法，时间复杂度是$O(n)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -846,7 +846,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(n)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h4 id=&#34;方法三前缀和&#34;&gt;方法三：前缀和&lt;/h4&gt;
+&lt;h3 id=&#34;方法三前缀和&#34;&gt;方法三：前缀和&lt;/h3&gt;
 &lt;p&gt;​	写到这里其实明白了：这道题的瓶颈就在于怎么寻找&lt;code&gt;当前尾字符能与之构成长度大于等于k的首字符个数&lt;/code&gt; ，不难想到区间个数询问，也就是前缀和维护。&lt;/p&gt;
 &lt;p&gt;​	记$pre[i]$ 为前$i$ 个字符中首字符出现的次数，每遍历一个尾字符，有效的首字符个数就是$pre[i-k+1]$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -903,7 +903,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(n)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h3 id=&#34;h-整除删除-tag优先队列-stl-双链表&#34;&gt;H. 整除删除 tag:优先队列 STL 双链表&lt;/h3&gt;
+&lt;h2 id=&#34;h-整除删除-tag优先队列-stl-双链表&#34;&gt;H. 整除删除 tag:优先队列 STL 双链表&lt;/h2&gt;
 &lt;p&gt;​	题目规模是$5e5$ ，而每次要找到最小值，根据时间复杂度也可以推出必须要用优先队列，而要做大量删除操作，且删除时需要用到前驱后继，所以就得用到双链表，是一道很考数据结构的题。&lt;/p&gt;
 &lt;p&gt;​	首先优先队列维护一个二元组，第一维是这个元素的值，第二维是元素下标，由于有$k$ 次操作，所以最终元素一定会减到$n-k$ 个，我们用优先队列每次取出最小值，然后利用双链表左右加权后即可，但这样面临一个问题：优先队列里的优先级是动态的，我们用优先队列拿到的最小值不一定是真的最小值，所以我们额外开设一个数组$sum[i]$ 代表下标$i$ 的加权，当拿到一个最小值时，如果加权不为$0$ ，那就加上后再插入回去，如果加权为$0$ ，说明他现在就是这个值，拼接一下双链表即可。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1028,7 +1028,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(klogn)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(nlogn)$&lt;/p&gt;
-&lt;h3 id=&#34;i-景区导游-taglca-枚举-树上距离&#34;&gt;I. 景区导游 tag:LCA 枚举 树上距离&lt;/h3&gt;
+&lt;h2 id=&#34;i-景区导游-taglca-枚举-树上距离&#34;&gt;I. 景区导游 tag:LCA 枚举 树上距离&lt;/h2&gt;
 &lt;p&gt;​	注意是树形结构，所以肯定是图论问题或者树形$dp$&lt;/p&gt;
 &lt;p&gt;​	首先考虑不跳过景点的总耗费怎么求？题目已经给出了$A_1,A_2,..,A_k$  的观光序列，这就涉及到&lt;code&gt;LCA求任意两点的树上距离&lt;/code&gt; ，由于第一个景点的距离不算，所以直接考虑$A_1→A_2,A_2→A_3,..$ ，只需要不断累加当前景点和上一个景点的树上距离，然后累加得到一个$sum$ 即可&lt;/p&gt;
 &lt;p&gt;​	枚举每一个要被删除的点，删除这个点，等价于删除$dist(A_{i-1}→A_i)+dist(A_i→A_i+1)(如果存在)$ 然后加上$dist(A_{i-1}→A_{i+1})$，然后计算$dist$的方法已经说过了&lt;/p&gt;
@@ -1195,7 +1195,7 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;​	一个小$tips$ ：最开始提交的时候发现虽然AC了但耗时$1980ms$ ，后面检查发现是读入优化没开启，开启重测后直接降到$890ms$  ，本题没有影响，但对时限$1s$ 的题目来说，这很有可能就是过与不过的分界线。&lt;/p&gt;
-&lt;h3 id=&#34;j-砍树-taglca-树上边差分&#34;&gt;J. 砍树 tag:LCA 树上边差分&lt;/h3&gt;
+&lt;h2 id=&#34;j-砍树-taglca-树上边差分&#34;&gt;J. 砍树 tag:LCA 树上边差分&lt;/h2&gt;
 &lt;p&gt;​	一个容易想到的办法：枚举每一条边，然后用并查集合并节点判断连通性（合并过程中忽略枚举的这条边），看看合并后无序对$(a_i,a_j)$ 均不连通，如果是的话，就输出这条边，又因为输出字典序较大的那条，所以逆序遍历即可，这样做的时间复杂度是$O(nmlogm)$  ，据说能拿一半分。&lt;/p&gt;
 &lt;p&gt;​	正解是：我们令从$a_i$ 走到$a_j$ 的边全部加$1$ ，然后和为$m$ 的边就是所求（因为被所有对加了一次），这样的时间复杂度仍然是$O(nm)$ ，然后发现刚刚&lt;code&gt;全部加1&lt;/code&gt; 的操作很像差分数组区间加，这样以来我们就容易想到在树上差分。&lt;/p&gt;
 &lt;p&gt;​	所以，我们要做的操作是，每遍历一个无序对，都将这个无序对路径上的边都加$1$ ，最后遍历所有的边得到他们的和，如果找得到一个和为$m$ 的边那就是，找不到就输出$-1$&lt;/p&gt;
@@ -1360,10 +1360,11 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;时间复杂度：$O(mlogn)$&lt;/p&gt;
 &lt;p&gt;空间复杂度：$O(n)$&lt;/p&gt;
-&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;h1 id=&#34;总结&#34;&gt;总结&lt;/h1&gt;
 &lt;p&gt;​	这次蓝桥杯考点还算常规，只不过有些考点做法有点偏（例如整除性质，双链表），填空题明显的变难了，第一题需要动动脑子或者动动手速才能做出来，&lt;code&gt;子序列&lt;/code&gt; 对于一些裸考或者没碰过字符串/数组的选手来说会陌生。&lt;/p&gt;
 &lt;p&gt;​	程序题对思维的要求能力高了不少，不过$GHJ$ 还是可以通过暴力骗点分的，最后两题考了图论，还好考前背了下$LCA$ 板子。&lt;/p&gt;
-&lt;p&gt;​	总的来说题目还是很锻炼的，希望国赛能拿个奖项。&lt;/p&gt;
+&lt;p&gt;​	总的来说题目还是很锻炼的，希望国赛能拿个奖项&lt;/p&gt;
+&lt;p&gt;​	upd(2023.6.16)喜提打铁国优，下一年再接再厉。&lt;/p&gt;
 </description>
         </item>
         <item>
