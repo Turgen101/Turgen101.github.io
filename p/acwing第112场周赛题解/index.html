@@ -2,29 +2,29 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='T1 5050. 排序 签到题
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } } T2 5051. 翻转 题意：有一个$1\sim n$ 的排列，现在求是否找得到一个区间使得$[l,r]$ 里的数字反转后让数组变成$1,2，..，n$
-思路：找到第一个$a[i]≠i$ 的点，并且$i$ 在$a[j]$ ，找到这个$j$ 并翻转$[i,j]$ ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，$i$ 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }   T2 5051. 翻转 题意：有一个\(1\sim n\) 的排列，现在求是否找得到一个区间使得\([l,r]\) 里的数字反转后让数组变成\(1,2，..，n\)
+思路：找到第一个\(a[i]≠i\) 的点，并且\(i\) 在\(a[j]\) ，找到这个\(j\) 并翻转\([i,j]\) ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，\(i\) 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
 代码：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.'>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt;const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.'>
 <title>Acwing第112场周赛题解</title>
 
 <link rel='canonical' href='https://Turgen.gitee.io/p/acwing%E7%AC%AC112%E5%9C%BA%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/'>
 
 <link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Acwing第112场周赛题解'>
 <meta property='og:description' content='T1 5050. 排序 签到题
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } } T2 5051. 翻转 题意：有一个$1\sim n$ 的排列，现在求是否找得到一个区间使得$[l,r]$ 里的数字反转后让数组变成$1,2，..，n$
-思路：找到第一个$a[i]≠i$ 的点，并且$i$ 在$a[j]$ ，找到这个$j$ 并翻转$[i,j]$ ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，$i$ 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }   T2 5051. 翻转 题意：有一个\(1\sim n\) 的排列，现在求是否找得到一个区间使得\([l,r]\) 里的数字反转后让数组变成\(1,2，..，n\)
+思路：找到第一个\(a[i]≠i\) 的点，并且\(i\) 在\(a[j]\) ，找到这个\(j\) 并翻转\([i,j]\) ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，\(i\) 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
 代码：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.'>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt;const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.'>
 <meta property='og:url' content='https://Turgen.gitee.io/p/acwing%E7%AC%AC112%E5%9C%BA%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/'>
 <meta property='og:site_name' content='羽肿的个人博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='题解' /><meta property='article:tag' content='Acwing' /><meta property='article:published_time' content='2023-07-23T15:53:15&#43;08:00'/><meta property='article:modified_time' content='2023-07-23T15:53:15&#43;08:00'/>
 <meta name="twitter:title" content="Acwing第112场周赛题解">
 <meta name="twitter:description" content="T1 5050. 排序 签到题
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } } T2 5051. 翻转 题意：有一个$1\sim n$ 的排列，现在求是否找得到一个区间使得$[l,r]$ 里的数字反转后让数组变成$1,2，..，n$
-思路：找到第一个$a[i]≠i$ 的点，并且$i$ 在$a[j]$ ，找到这个$j$ 并翻转$[i,j]$ ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，$i$ 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt; int main(){ ios::sync_with_stdio(false),cin.tie(0); int tt; cin&amp;gt;&amp;gt;tt; while(tt--){ int k; cin&amp;gt;&amp;gt;k; string s; cin&amp;gt;&amp;gt;s; sort(s.begin(),s.end()); cout&amp;lt;&amp;lt;s&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;; } }   T2 5051. 翻转 题意：有一个\(1\sim n\) 的排列，现在求是否找得到一个区间使得\([l,r]\) 里的数字反转后让数组变成\(1,2，..，n\)
+思路：找到第一个\(a[i]≠i\) 的点，并且\(i\) 在\(a[j]\) ，找到这个\(j\) 并翻转\([i,j]\) ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，\(i\) 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。
 代码：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 #include &amp;lt;iostream&amp;gt; using namespace std; #include &amp;lt;algorithm&amp;gt; const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  #include &amp;lt;iostream&amp;gt;using namespace std; #include &amp;lt;algorithm&amp;gt;const int N=1e4&#43;7; int a[N]; int ansl,ansr; int main(){ ios::sync_with_stdio(false),cin.">
     </head>
     <body class="
     article-page
@@ -254,28 +254,28 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">tt</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">tt</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="n">tt</span><span class="o">--</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">string</span> <span class="n">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> 
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">tt</span><span class="p">;</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">tt</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">tt</span><span class="o">--</span><span class="p">){</span>
+		<span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
+		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="p">;</span>
+		<span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">s</span><span class="p">;</span>
+		<span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">s</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
 </div>
 </div><h1 id="t2-5051-翻转">T2 5051. 翻转</h1>
-<p>题意：有一个$1\sim n$ 的排列，现在求是否找得到一个区间使得$[l,r]$ 里的数字反转后让数组变成$1,2，..，n$</p>
-<p>思路：找到第一个$a[i]≠i$ 的点，并且$i$ 在$a[j]$ ，找到这个$j$ 并翻转$[i,j]$ ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，$i$ 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。</p>
+<p>题意：有一个<span class="math inline">\(1\sim n\)</span> 的排列，现在求是否找得到一个区间使得<span class="math inline">\([l,r]\)</span> 里的数字反转后让数组变成<span class="math inline">\(1,2，..，n\)</span></p>
+<p>思路：找到第一个<span class="math inline">\(a[i]≠i\)</span> 的点，并且<span class="math inline">\(i\)</span> 在<span class="math inline">\(a[j]\)</span> ，找到这个<span class="math inline">\(j\)</span> 并翻转<span class="math inline">\([i,j]\)</span> ，如果翻转后符合就是这个，否则无解。证明：如果翻转这个区域后仍然不符合，说明这个区间是错的，但不翻转这个区间，<span class="math inline">\(i\)</span> 就永远回不到他原本争取的位置，所以不翻转这个区间也是错的，故只有这个解。</p>
 <p>代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -322,61 +322,61 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mf">1e4</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">ansl</span><span class="p">,</span><span class="n">ansr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">				<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">					<span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">						<span class="n">ansl</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">ansr</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">					<span class="p">}</span> 
-</span></span><span class="line"><span class="cl">					<span class="k">else</span> <span class="n">ansl</span><span class="o">=</span><span class="n">j</span><span class="p">,</span><span class="n">ansr</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">}</span>
-</span></span><span class="line"><span class="cl">			<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="n">ansl</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="n">ansr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;</span><span class="n">r</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">		<span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">		<span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">l</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="n">r</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;0 0&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ansl</span><span class="o">&lt;&lt;</span><span class="s">&#34; &#34;</span><span class="o">&lt;&lt;</span><span class="n">ansr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span> 
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mf">1e4</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">ansl</span><span class="p">,</span><span class="n">ansr</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">i</span><span class="p">){</span>
+			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="p">){</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">){</span>
+						<span class="n">ansl</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">ansr</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+					<span class="p">}</span> 
+					<span class="k">else</span> <span class="n">ansl</span><span class="o">=</span><span class="n">j</span><span class="p">,</span><span class="n">ansr</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">l</span><span class="o">=</span><span class="n">ansl</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="n">ansr</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">l</span><span class="o">&lt;</span><span class="n">r</span><span class="p">){</span>
+		<span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">];</span>
+		<span class="n">a</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+		<span class="n">a</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+		<span class="n">l</span><span class="o">++</span><span class="p">;</span>
+		<span class="n">r</span><span class="o">--</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">){</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;0 0&#34;</span><span class="p">;</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ansl</span><span class="o">&lt;&lt;</span><span class="s">&#34; &#34;</span><span class="o">&lt;&lt;</span><span class="n">ansr</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
 </div>
 </div><h1 id="t3-5052-排列">T3 5052. 排列</h1>
-<p>题意：已知，$a1,a2,…,an$ 是 $1∼n$ 的全排列中字典序第 kk 个排列。</p>
-<p>请你判断，一共有多少个整数 $x$同时满足以下所有条件：</p>
+<p>题意：已知，<span class="math inline">\(a1,a2,…,an\)</span> 是 <span class="math inline">\(1∼n\)</span> 的全排列中字典序第 kk 个排列。</p>
+<p>请你判断，一共有多少个整数 <span class="math inline">\(x\)</span>同时满足以下所有条件：</p>
 <ol>
-<li>$1≤x≤n$</li>
-<li>$x$ 的十进制表示不含 4和 7 以外的数字。</li>
-<li>$a_x$ 的十进制表示不含 4 和 7 以外的数字。</li>
+<li><span class="math inline">\(1≤x≤n\)</span></li>
+<li><span class="math inline">\(x\)</span> 的十进制表示不含 4和 7 以外的数字。</li>
+<li><span class="math inline">\(a_x\)</span> 的十进制表示不含 4 和 7 以外的数字。</li>
 </ol>
-<p>思路：首先$x$ 枚举只含$4,7$ 的数字很容易，然后判断$x\le n$ 也很容易，再看看$k$ 是不是合法的，由于直接求阶乘再比较不可行，由于只关注$n!$ 与$k$ 的大小，所以可以先线性求$n!$ ，如果过程中大于了$k$ 就是合法的，否则就是不合法的。</p>
-<p>​	$n$ 的全排列有$n!$ 种，现在的瓶颈就在于求第$k$ 个全排列的做法，我们考虑第一位放$1$ ，后面的$(n-1)$ 位可以有$(n-1)<em>(n-2)</em>(n-3)..=(n-1)!$  种选择，如果$k&gt;(n-1)!$ ，说明放$1$ 的字典序中前面的数都没有大于$k$ ，考虑放$2$ ，则有$(n-2)!$ 种选择，以此类推，但这里求阶乘与$k$ 的大小仍然用到了与前面相同的手法，以此类推。</p>
-<p>​	这里介绍一个数学方法：<code>康托展开</code> ，可以用这个公式获取第$k$ 个排列，但仍然解决不了问题，因为$n$ 的范围也非常大，如果强行套公式也过不了，容易发现我们的$n$ 的排列的长度虽然巨大，但只关注第$k$ 个的第$x$ 位，而$x&lt;n$ ，也就是说我们关注的第$x$ 位不会超过$10^9$ ，我们如何快速找到第$k$ 个排列的第$j$ 位呢？</p>
-<p>​	不难发现康托展开真正改变的是$\exists v∈[1,n],fact(v)\le k$ 往后，例如$n=3,k=1$ ，容易发现前几个排列为：$1,2,3/,1,3,2,/2,1,3..$ ，所以只需要找到序列中第一个满足这个条件的$v$ ，如果$v$ 的位置大于了$x$ ，说明$a_x$  不需要变（因为后面的字典序变化产生的不同结果已经超过了$k$ 个），否则就从$v$ 开始寻找第$x$ 个位置的数字(这个应用已记录至组合数学那章)</p>
+<p>思路：首先<span class="math inline">\(x\)</span> 枚举只含<span class="math inline">\(4,7\)</span> 的数字很容易，然后判断<span class="math inline">\(x\le n\)</span> 也很容易，再看看<span class="math inline">\(k\)</span> 是不是合法的，由于直接求阶乘再比较不可行，由于只关注<span class="math inline">\(n!\)</span> 与<span class="math inline">\(k\)</span> 的大小，所以可以先线性求<span class="math inline">\(n!\)</span> ，如果过程中大于了<span class="math inline">\(k\)</span> 就是合法的，否则就是不合法的。</p>
+<p>​	<span class="math inline">\(n\)</span> 的全排列有<span class="math inline">\(n!\)</span> 种，现在的瓶颈就在于求第<span class="math inline">\(k\)</span> 个全排列的做法，我们考虑第一位放<span class="math inline">\(1\)</span> ，后面的<span class="math inline">\((n-1)\)</span> 位可以有<span class="math inline">\((n-1)*(n-2)*(n-3)..=(n-1)!\)</span>  种选择，如果<span class="math inline">\(k>(n-1)!\)</span> ，说明放<span class="math inline">\(1\)</span> 的字典序中前面的数都没有大于<span class="math inline">\(k\)</span> ，考虑放<span class="math inline">\(2\)</span> ，则有<span class="math inline">\((n-2)!\)</span> 种选择，以此类推，但这里求阶乘与<span class="math inline">\(k\)</span> 的大小仍然用到了与前面相同的手法，以此类推。</p>
+<p>​	这里介绍一个数学方法：<code>康托展开</code> ，可以用这个公式获取第<span class="math inline">\(k\)</span> 个排列，但仍然解决不了问题，因为<span class="math inline">\(n\)</span> 的范围也非常大，如果强行套公式也过不了，容易发现我们的<span class="math inline">\(n\)</span> 的排列的长度虽然巨大，但只关注第<span class="math inline">\(k\)</span> 个的第<span class="math inline">\(x\)</span> 位，而<span class="math inline">\(x<n\)</span> ，也就是说我们关注的第<span class="math inline">\(x\)</span> 位不会超过<span class="math inline">\(10^9\)</span> ，我们如何快速找到第<span class="math inline">\(k\)</span> 个排列的第<span class="math inline">\(j\)</span> 位呢？</p>
+<p>​	不难发现康托展开真正改变的是<span class="math inline">\(\exists v∈[1,n],fact(v)\le k\)</span> 往后，例如<span class="math inline">\(n=3,k=1\)</span> ，容易发现前几个排列为：<span class="math inline">\(1,2,3/,1,3,2,/2,1,3..\)</span> ，所以只需要找到序列中第一个满足这个条件的<span class="math inline">\(v\)</span> ，如果<span class="math inline">\(v\)</span> 的位置大于了<span class="math inline">\(x\)</span> ，说明<span class="math inline">\(a_x\)</span>  不需要变（因为后面的字典序变化产生的不同结果已经超过了<span class="math inline">\(k\)</span> 个），否则就从<span class="math inline">\(v\)</span> 开始寻找第<span class="math inline">\(x\)</span> 个位置的数字(这个应用已记录至组合数学那章)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -443,69 +443,69 @@
 </span><span class="lnt">62
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt; </span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">ll</span> <span class="n">res</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">res</span><span class="o">*=</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">res</span><span class="o">&gt;</span><span class="n">k</span><span class="p">)</span><span class="k">return</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span> <span class="c1">//获取第k位 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">kk</span><span class="o">=</span><span class="n">k</span><span class="p">;</span> 
-</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">&lt;</span><span class="n">k</span><span class="p">)</span><span class="n">v</span><span class="o">++</span><span class="p">;</span><span class="c1">//找到最后一个小于k的阶乘 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">//由于(v)!是第一个大于k的
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//n-v就是他的正序位置 n-v+1就不大了 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">v</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> <span class="c1">//枚举后v位 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span> <span class="c1">//康托展开
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">ll</span> <span class="n">p</span><span class="o">=</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">);</span> <span class="c1">//第i个位置的阶乘是(n-i)!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">&lt;</span><span class="n">kk</span><span class="p">)</span><span class="n">kk</span><span class="o">-=</span><span class="n">p</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">				<span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">					<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="k">return</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="p">);</span><span class="c1">//增量加上基准位置
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">					<span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">				<span class="p">}</span> 
-</span></span><span class="line"><span class="cl">			<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="p">}</span> 
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">check</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="n">to_string</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;4&#39;</span><span class="o">&amp;&amp;</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;7&#39;</span><span class="p">)</span><span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">){</span><span class="c1">//形参要用LL
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">n</span><span class="p">)</span><span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&amp;&amp;</span><span class="n">check</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="n">ans</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">7</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">4</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">&lt;</span><span class="n">k</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt; </span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+<span class="n">ll</span> <span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
+<span class="n">ll</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">ll</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+	<span class="n">ll</span> <span class="n">res</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">res</span><span class="o">*=</span><span class="n">i</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">res</span><span class="o">&gt;</span><span class="n">k</span><span class="p">)</span><span class="k">return</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">b</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+<span class="kt">int</span> <span class="nf">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span> <span class="c1">//获取第k位 
+</span><span class="c1"></span>	<span class="kt">int</span> <span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">kk</span><span class="o">=</span><span class="n">k</span><span class="p">;</span> 
+	<span class="k">while</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">&lt;</span><span class="n">k</span><span class="p">)</span><span class="n">v</span><span class="o">++</span><span class="p">;</span><span class="c1">//找到最后一个小于k的阶乘 
+</span><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+	<span class="c1">//由于(v)!是第一个大于k的
+</span><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//n-v就是他的正序位置 n-v+1就不大了 
+</span><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">v</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span> <span class="c1">//枚举后v位 
+</span><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span> <span class="c1">//康托展开
+</span><span class="c1"></span>				<span class="n">ll</span> <span class="n">p</span><span class="o">=</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">);</span> <span class="c1">//第i个位置的阶乘是(n-i)!
+</span><span class="c1"></span>				<span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">&lt;</span><span class="n">kk</span><span class="p">)</span><span class="n">kk</span><span class="o">-=</span><span class="n">p</span><span class="p">;</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="k">return</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">v</span><span class="p">);</span><span class="c1">//增量加上基准位置
+</span><span class="c1"></span>					<span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span> 
+			<span class="p">}</span>
+		<span class="p">}</span> 
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">check</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">){</span>
+	<span class="n">string</span> <span class="n">s</span><span class="o">=</span><span class="n">to_string</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;4&#39;</span><span class="o">&amp;&amp;</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;7&#39;</span><span class="p">)</span><span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">ll</span> <span class="n">x</span><span class="p">){</span><span class="c1">//形参要用LL
+</span><span class="c1"></span>	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">n</span><span class="p">)</span><span class="k">return</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&amp;&amp;</span><span class="n">check</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+	<span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">7</span><span class="p">);</span>
+	<span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">),</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">&lt;</span><span class="n">k</span><span class="p">){</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div>
 </section>
@@ -562,7 +562,7 @@
     <div class="disqus-container">
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     
